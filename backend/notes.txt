@@ -13,3 +13,7 @@ Schema: es la estructura de la base de datos, es decir, los campos que va a tene
 middleware: es una función que se ejecuta antes de que llegue a la petición al controlador
 
 big crypt: es una función que encripta la contraseña
+
+hash: es una función que encripta la contraseña
+
+genSalt: cuan strong es la encriptación
