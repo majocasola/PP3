@@ -1,0 +1,15 @@
+-The middleware in node. js is a function that will have all the access for requesting an object, responding to an object, and moving to the next middleware function in the application request-response cycle-- poner siempre el callback next()
+req, res
+
+
+trim: para los espacios innecesarios en los strings
+unique: para que no se repitan los emails
+role: para que no se repitan los roles, usuario y admin
+
+timestamps: para que se registren las fechas de creación y actualización de los datos
+
+Schema: es la estructura de la base de datos, es decir, los campos que va a tener la tabla
+
+middleware: es una función que se ejecuta antes de que llegue a la petición al controlador
+
+big crypt: es una función que encripta la contraseña

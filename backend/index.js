@@ -1,6 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import authRoutes from './routes/auth.js';
+
+
 
 dotenv.config();
 /*
@@ -17,14 +20,10 @@ mongoose
     .catch((err) => clg('DB con error', err));
 
 
-app.get('/usuarios', (req, res) => {
-    res.json({
-        data: 'Majo Casola de Airnet Moreno Arg'
-    })
-});
+// Router middleware
+app.use('/api', authRoutes)
 
 const port = process.env.PORT || 8000
-
 
 
 app.listen(port, () => {
