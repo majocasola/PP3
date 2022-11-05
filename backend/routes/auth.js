@@ -6,9 +6,9 @@ const router = express.Router();
 
 // controllers
 
-import { users } from '../controllers/auth.js';
+import { register } from '../controllers/auth.js';
 
-router.get('/users', users);
+router.post('/register', register);
 
 
 export default router;

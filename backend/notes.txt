@@ -1,3 +1,9 @@
+node express: es un framework de nodejs que nos permite crear aplicaciones web de forma rápida y sencilla. 
+
+
+--usare import para node y react, se añade type:module en el package.json
+
+
 -The middleware in node. js is a function that will have all the access for requesting an object, responding to an object, and moving to the next middleware function in the application request-response cycle-- poner siempre el callback next()
 req, res
 
@@ -17,3 +23,9 @@ big crypt: es una función que encripta la contraseña
 hash: es una función que encripta la contraseña
 
 genSalt: cuan strong es la encriptación
+
+Morgan: es un middleware que nos permite ver las peticiones que se hacen al servidor
+
+dev: es un modo de morgan que nos permite ver las peticiones que se hacen al servidor
+
+Postamn: es una herramienta para hacer peticiones http a un servidor de forma sencilla y rápida (get, post, put, delete)
