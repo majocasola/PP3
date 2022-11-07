@@ -29,3 +29,5 @@ Morgan: es un middleware que nos permite ver las peticiones que se hacen al serv
 dev: es un modo de morgan que nos permite ver las peticiones que se hacen al servidor
 
 Postamn: es una herramienta para hacer peticiones http a un servidor de forma sencilla y rápida (get, post, put, delete)
+
+destructuring es una forma de extraer propiedades de un objeto y asignarlas a variables
