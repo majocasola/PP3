@@ -54,3 +54,48 @@ export const register = async(req, res) => {
         console.log(err);
     }
 };
+
+
+
+export const login = async(req, res) => {
+    try {
+        // destructure name, email, password from req.body
+        const { email, password } = req.body;
+        // validate
+
+        if (!email) {
+            return res.json({ error: 'Email ya usado' });
+        }
+        if (!password || password.length < 6) {
+            return res.json({ error: 'Password debe tener al menos 6 caracteres' });
+        }
+        //chequar si el mail ya existe
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.json({ error: 'Usuario no encontrado' });
+        }
+        // compare password
+        const match = await comparePassword(password, user.password);
+        if (!match) {
+            return res.json({ errror: 'Contraseña incorrecta' });
+        }
+
+        // crear token firmado
+        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+
+        // send response
+        res.json({
+            user: {
+                name: user.name,
+                email: user.email,
+                role: user.role,
+                address: user.address,
+            },
+            token
+        });
+
+
+    } catch (err) {
+        console.log(err);
+    }
+};
