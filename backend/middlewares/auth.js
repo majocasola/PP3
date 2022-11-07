@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import User from "../models/user.js";
 
 // 401 no autorizado
 export const requireSignin = (req, res, next) => {
@@ -11,5 +12,18 @@ export const requireSignin = (req, res, next) => {
 
     } catch (err) {
         return res.status(401).json(err);
+    }
+};
+
+export const isAdmin = async(req, res, next) => {
+    try {
+        const user = await User.findById(req.user._id);
+        if (user.role !== 1) {
+            return res.status(401).send('No autorizado')
+        } else {
+            next();
+        }
+    } catch (err) {
+        console.log(err);
     }
 };
