@@ -18,5 +18,4 @@ router.post('/login', login);
 router.get('/secret', requireSignin, isAdmin, secret);
 
 
-
 export default router;
