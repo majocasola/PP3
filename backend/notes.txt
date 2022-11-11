@@ -34,3 +34,4 @@ destructuring es una forma de extraer propiedades de un objeto y asignarlas a va
 
 
 slug: es una librería que nos permite crear urls amigables, ejemplo React js se convierte en react-js
+
