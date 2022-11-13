@@ -42,3 +42,5 @@ express formidable: es un middleware que nos permite subir archivos a un servido
 buffer: es un objeto que nos permite manipular datos binarios (imagenes, videos, etc)
 
 populate: es una función que nos permite rellenar los campos de un objeto con los datos de otro objeto (relaciones) 
+
+fetch: es una función que nos permite hacer peticiones http a un servidor de forma sencilla y rápida (get, post, put, delete)   (fetch api) 
