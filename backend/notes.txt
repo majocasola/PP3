@@ -40,3 +40,5 @@ express formidable: es un middleware que nos permite subir archivos a un servido
 ...: es un operador que nos permite extraer las propiedades de un objeto y asignarlas a un nuevo objeto (spread operator)
 
 buffer: es un objeto que nos permite manipular datos binarios (imagenes, videos, etc)
+
+populate: es una función que nos permite rellenar los campos de un objeto con los datos de otro objeto (relaciones) 

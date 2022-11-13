@@ -47,6 +47,7 @@ export const create = async(req, res) => {
 export const list = async(req, res) => {
     try {
         const products = await Product.find({})
+            .populate("category")
             .select("-photo")
             .limit(12)
             .sort({ createAt: -1 });
@@ -54,5 +55,17 @@ export const list = async(req, res) => {
         res.json(products);
     } catch (err) {
 
+    }
+};
+
+export const read = async(req, res) => {
+    try {
+        const product = await Product.findOne({ slug: req.params.slug })
+            .populate("category")
+            .select("-photo");
+
+        res.json(product);
+    } catch (err) {
+        console.log(err);
     }
 };
