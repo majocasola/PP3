@@ -6,8 +6,10 @@ const router = express.Router();
 // middlewares
 import { requireSignin, isAdmin } from '../middlewares/auth.js';
 // controllers
-import { create } from '../controllers/product.js';
+import { create, list } from '../controllers/product.js';
 
 router.post('/product', requireSignin, isAdmin, formidable(), create);
+router.get('/products', list);
+
 
 export default router;

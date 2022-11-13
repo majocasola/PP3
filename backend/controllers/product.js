@@ -43,3 +43,16 @@ export const create = async(req, res) => {
         return res.status(400).json(err.message);
     }
 };
+
+export const list = async(req, res) => {
+    try {
+        const products = await Product.find({})
+            .select("-photo")
+            .limit(12)
+            .sort({ createAt: -1 });
+
+        res.json(products);
+    } catch (err) {
+
+    }
+};
