@@ -1,4 +1,6 @@
 import Product from "../models/product.js";
+import fs from "fs";
+import slugify from "slugify";
 
 export const create = async(req, res) => {
     try {
@@ -24,6 +26,17 @@ export const create = async(req, res) => {
             case photo && photo.size > 1000000:
                 res.json({ error: "La imagen debe ser menor a 1MB" });
         }
+
+        // create product
+        const product = new Product({...req.fields, slug: slugify(name) });
+
+        if (photo) {
+            product.photo.data = fs.readFileSync(photo.path);
+            product.photo.contentType = photo.type;
+        }
+
+        await product.save();
+        res.json(product);
 
     } catch (err) {
         console.log(err);
