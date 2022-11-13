@@ -81,3 +81,13 @@ export const photo = async(req, res) => {
         console.log(err);
     }
 };
+
+
+export const remove = async(req, res) => {
+    try {
+        const product = await Product.findByIdAndDelete(req.params.productId).select("-photo");
+        res.json(product);
+    } catch (err) {
+        console.log(err);
+    }
+};
