@@ -92,6 +92,7 @@ export const remove = async(req, res) => {
 };
 
 
+
 export const update = async(req, res) => {
     try {
 
@@ -134,4 +135,5 @@ export const update = async(req, res) => {
         console.log(err);
         return res.status(400).json(err.message);
     }
+
 };
