@@ -44,3 +44,6 @@ buffer: es un objeto que nos permite manipular datos binarios (imagenes, videos,
 populate: es una función que nos permite rellenar los campos de un objeto con los datos de otro objeto (relaciones) 
 
 fetch: es una función que nos permite hacer peticiones http a un servidor de forma sencilla y rápida (get, post, put, delete)   (fetch api) 
+
+
+fragment: es una etiqueta que nos permite agrupar elementos html sin necesidad de crear un div 
