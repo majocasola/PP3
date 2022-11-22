@@ -47,3 +47,5 @@ fetch: es una función que nos permite hacer peticiones http a un servidor de fo
 
 
 fragment: es una etiqueta que nos permite agrupar elementos html sin necesidad de crear un div 
+
+props: es un objeto que nos permite pasar datos de un componente a otro componente 
