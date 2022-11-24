@@ -49,3 +49,5 @@ fetch: es una función que nos permite hacer peticiones http a un servidor de fo
 fragment: es una etiqueta que nos permite agrupar elementos html sin necesidad de crear un div 
 
 props: es un objeto que nos permite pasar datos de un componente a otro componente 
+
+hook: es una función que nos permite ejecutar código en un componente de forma sencilla y rápida (useState, useEffect, useContext, useReducer, useRef, useImperativeHandle, useLayoutEffect, useCallback, useMemo, useDebugValue) 
